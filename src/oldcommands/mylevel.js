@@ -1,0 +1,17 @@
+module.exports = {
+  run: function(message) {
+    message.channel.coloredEmbed(message.author.username + '\'s permission level', message.author.permLevel + ' - ' + client.config.permLevels.find((l) => l.level === message.author.permLevel).name, 0x7289DA);
+  },
+  conf: {
+    enabled: true,
+    guildOnly: true,
+    aliases: [],
+    permLevel: 'User',
+  },
+
+  help: {
+    category: 'Miscelaneous',
+    description: 'Tells you your permission level for the current message location.',
+    usage: 'mylevel',
+  },
+};
